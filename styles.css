@@ -2,11 +2,16 @@
   font-family: odin;
   src: url(fonts/Norse-Bold.otf) format("opentype");
 }
+
 html {
   height: 100vh;
   min-width: 100vh;
-  --width: 30%;
+  --width: 40%;
+  --accent: #596d48;
+  --font_color: aliceblue;
+  background-color: rgb(248, 246, 246);
 }
+
 body {
   display: flex;
   min-height: 100%;
@@ -37,7 +42,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40%;
+  margin-top: 32%;
   background: rgba(0, 0, 0, 0.35);
 }
 
@@ -49,6 +54,96 @@ body {
   font-size: 5rem;
 }
 
-.credits > p > a:visited {
+.credits > p > a:any-link {
   color: aliceblue;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5.2rem;
+  width: 60%;
+}
+
+.preface-text,
+.prompt {
+  margin-left: 2rem;
+  margin-right: 6rem;
+  font-size: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+p {
+  margin-bottom: 0.8rem;
+}
+
+.form {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.28);
+  background-color: white;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2rem;
+  margin-bottom: 1.2rem;
+  gap: 1.6rem;
+  margin-right: 2rem;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  flex: 40%;
+}
+
+input {
+  appearance: none;
+  outline: none;
+  width: 60%;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid rgb(247, 247, 247);
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:focus {
+  border: var(--accent) 1px solid;
+  box-shadow: 0px 0px 2px;
+}
+
+label {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+button {
+  width: 12rem;
+  height: 2.4rem;
+  border-radius: 8px;
+  margin: 2rem;
+  border: 1px;
+  background-color: var(--accent);
+  box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.28);
+  color: var(--font_color);
+  font-weight: 800;
+}
+
+.login-prompt:any-link {
+  color: var(--accent);
+}
+
+button ~ div {
+  margin-left: 2rem;
+  font-weight: 900;
+}
+
+.form-header {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  margin-left: 2rem;
 }
